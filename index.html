@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medicine Reminder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Reminder Section -->
+    <div id="reminderSection">
+      <h1>💊 Medicine Reminder</h1>
+      
+      <label>Medicine Name:</label>
+      <input type="text" id="medName" placeholder="e.g. Paracetamol" />
+
+      <label>Dosage:</label>
+      <input type="text" id="dosage" placeholder="e.g. 500mg" />
+
+      <label>Time:</label>
+      <input type="time" id="reminderTime" />
+
+      <button onclick="setReminder()">Set Reminder</button>
+
+      <p id="message"></p>
+      <h3>🕒 Upcoming Reminders:</h3>
+      <ul id="reminderList"></ul>
+
+      <button onclick="toggleSchedule()">View Medicine Schedule</button>
+    </div>
+
+    <!-- Schedule Section -->
+    <div id="scheduleSection" style="display: none;">
+      <h1>🕒 Medicine Schedule</h1>
+      <ul id="scheduleList">
+        <!-- Scheduled medicines will be displayed here -->
+      </ul>
+      <br />
+      <button onclick="toggleReminder()">Go to Reminder</button>
+    </div>
+  </div>
+
+  <audio id="alarm" src="alarm.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
